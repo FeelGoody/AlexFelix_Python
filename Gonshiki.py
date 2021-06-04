@@ -25,20 +25,26 @@
 import os
 import json
 
+myDict = {}
+# myDict = {'John1': 'Mazda', 'Peter': 'BMW',
+#           'Jason': 'Nissan', 'Marry': 'Toyota'}
 
-def save_json(data_dict):
-    data = json.dumps(data_dict)
-    # my_path = 'D:\Dropbox\Python\AlexFelix_Python\GitHub\AlexFelix_Python'
-    with open("./GitHub/AlexFelix_Python/gonshik.json", "w") as file:
+def save_json():
+    global myDict
+    data = json.dumps(myDict)
+    with open("gonshik.json", "w") as file:
         file.write(data)
-    
-    # with open('./square.json', 'w') as file:
-    #     json.dump(data, file, indent=1)
+
+def load_json():
+    global myDict
+    try:
+        with open("gonshik.json", "r") as file:
+            myDict = json.load(file)
+    except Exception as err:
+        print("Error load file:", err)
 
 def main():
-    myDict = {'John1': 'Mazda', 'Peter': 'BMW',
-              'Jason': 'Nissan', 'Marry': 'Toyota'}
-    save_json(myDict)
+    global myDict
     while(True):
         userAction = input('\n\n--MAIN MENU--\n' +
                            'Press 1. Insert new racer\n' +
@@ -82,9 +88,9 @@ def main():
             print(f'The terminal has been cleaned.')
            
 
-       
 
 if __name__ == '__main__':
-
+    load_json()
     main()
+    save_json()
 # 123
