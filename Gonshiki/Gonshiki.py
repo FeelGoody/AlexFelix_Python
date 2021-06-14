@@ -24,6 +24,7 @@
 # import sys
 import os
 import json
+import re
 
 myDict = {}
 # myDict = {'John1': 'Mazda', 'Peter': 'BMW',
@@ -55,7 +56,7 @@ def main():
         if userAction == '0':
             break
         elif userAction == '1':
-            # ['John', 'Suzuki']
+
             userInput1 = input("please your name and car (Exm: John Suzuki): ")
             newDataSplited = userInput1.split(' ')
             
@@ -93,4 +94,3 @@ if __name__ == '__main__':
     load_json()
     main()
     save_json()
-# 123
