@@ -1,3 +1,6 @@
 {
-  "python.analysis.extraPaths": ["re_LOG"]
+  "python.analysis.extraPaths": [
+    "./re_LOG"
+  ],
+  "python.pythonPath": "C:\\Python38\\python.exe"
 }
