@@ -8,7 +8,7 @@ Starting pgn_init_srverrArr , PL function.
  ( 7-Jun-21 05:53:40).
 End of pgn_init_srverrArr , PL function, CPU: 0.00 Elapsed time: 0.00.
 After pgn_init_srverrArr , status =<0>
-Setting gErrFixOn to 1
+Setting gErrFixOn to 110.27.131.139
 Starting ti_evtConnInit , PL function.
 Server ID = 484
 After ti_evtConnInit , status =<0>
